@@ -6,6 +6,12 @@ edition = "2021"
 [dependencies]
 stylus-sdk = "0.4.2"
 mini-alloc = "0.4.2"
+arrayref = "0.3.7"
+
+[dependencies.p256]
+version = "0.13.2"
+default-features = false
+features = ["arithmetic", "ecdsa"]
 
 [features]
 export-abi = ["stylus-sdk/export-abi"]
@@ -19,6 +25,6 @@ codegen-units = 1
 strip = true
 lto = true
 panic = "abort"
-opt-level = "s"
+opt-level = "z"
 
 [workspace]
